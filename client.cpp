@@ -83,9 +83,10 @@ int main() {
          (struct sockaddr *) &my_addr, 
          sizeof(my_addr));
 
-    maxfd = sockfd_rx + 1; // Note that the file descriptor of stdin is "0"
+  QQ  maxfd = sockfd_rx + 1; // Note that the file descriptor of stdin is "0"
     
-    int state = STATE_OFFLINE;
+
+/    int state = STATE_OFFLINE;
     int event;
     int token; // Assume the token is a 32-bit integer
 

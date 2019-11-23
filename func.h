@@ -5,6 +5,8 @@
 #include <string>
 #include <cstdio>
 #include <fstream>
+#include <map>
+
 using namespace std;
 
 // class Func
@@ -14,6 +16,20 @@ using namespace std;
 //         string log_in(string uname, string pass);
 //         void printInfo();
 // };
-string log_in(string uname, string pass);
-void printInfo();
+class LogIn{
+    public: 
+        LogIn();
+        string log_in(string uname, string pass);
+        void printInfo();
+};
+
+class Subscribtion{
+    public:
+        map<string, string> subscribtion;
+        Subscribtion();
+        bool isSubscribed(string subscribe, string subscriber);
+        void Subscribe(string subscribe, string subscriber);
+        void Unsubscribe(string subscribe, string subscriber);
+};
+
 #endif
